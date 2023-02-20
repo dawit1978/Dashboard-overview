@@ -19,7 +19,8 @@ import { ColorModeContext, useMode } from "./theme";
 
 
 function App() {
-  const [theme, colorMode] = useMode();
+  const [theme, colorMode] = useMode();  
+  const [selected, setSelected ] = useState("")
   const [isSidebar, setIsSidebar] = useState(true);
 
   return (
@@ -29,17 +30,17 @@ function App() {
         <div className="app">
           <Sidebar isSidebar={isSidebar} />
           <main className="content">
-            <Topbar setIsSidebar={setIsSidebar} />
+            <Topbar selected={selected} setIsSidebar={setIsSidebar} />
             <Routes>
              
-              <Route path="/" element={<Overview />} />
-              <Route path="/tickets" element={<Tickets />} />
-              <Route path="/ideas" element={<Ideas />} />
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/agents" element={<Agents />} />
-              <Route path="/articles" element={<Articles />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/subscription" element={<Subscription />} /> 
+              <Route  path="/" element={<Overview setSelected={(select)=>{setSelected(select)}}/>} />
+              <Route  path="/tickets" element={<Tickets setSelected={(select)=>{setSelected(select)}}/>} />
+              <Route  path="/ideas" element={<Ideas setSelected={(select)=>{setSelected(select)}} />} />
+              <Route  path="/contacts" element={<Contacts setSelected={(select)=>{setSelected(select)}}/>} />
+              <Route   path="/agents" element={<Agents setSelected={(select)=>{setSelected(select)}}/>} />
+              <Route   path="/articles" element={<Articles setSelected={(select)=>{setSelected(select)}} />} />
+              <Route  path="/settings" element={<Settings setSelected={(select)=>{setSelected(select)}} />} />
+              <Route  path="/subscription" element={<Subscription setSelected={(select)=>{setSelected(select)}}/>} /> 
             
             </Routes>
           </main>

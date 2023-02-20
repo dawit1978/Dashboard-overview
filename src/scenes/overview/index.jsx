@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box, Button, IconButton, Radio, RadioGroup, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
@@ -16,14 +16,19 @@ import TaskDetails from "../../components/TaskDetails";
 import Header from "../../components/Header";
 
 
-const Overview = () => {
+const Overview = (props) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+
+  useEffect(()=>{
+    props.setSelected("Overview")
+
+  },[]);
 
   return (
     <Box m="20px"mb="50px">
       <Box m="20px">
-      <Header title="Overview" />
+      {/* <Header title="Overview" /> */}
      
     </Box>
       {/* GRID & CHARTS */}

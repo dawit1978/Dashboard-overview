@@ -11,7 +11,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import Header from "../../components/Header";
 
-const Topbar = () => {
+const Topbar = (props) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
@@ -26,7 +26,7 @@ const Topbar = () => {
         variant="h2"
       >
            
-        <Header title="Dashboard" />
+        <Header title={props.selected} />
       </Box>
 
       {/* ICONS */}

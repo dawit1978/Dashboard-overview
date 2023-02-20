@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 import Header from "../../components/Header";
 
-const Articles = () => {
+const Articles = (props) => {
+
+  useEffect(()=>{
+    props.setSelected("Articles")
+
+  },[]);
+
   return (
     <Box m="20px">
-      <Header title="Articles"  />
+     
      
     </Box>
   );
