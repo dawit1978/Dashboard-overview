@@ -4,9 +4,11 @@ import { Box } from "@mui/material";
 
 const Subscription = (props) => {
 
+  const { setSelected } = props
   useEffect(()=>{
-    props.setSelected("Subscription")
-  },[]);
+   setSelected("Subscription")
+  },[setSelected]);
+
   return (
     <Box m="20px">
       

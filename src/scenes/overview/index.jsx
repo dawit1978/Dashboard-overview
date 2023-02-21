@@ -15,11 +15,11 @@ import TaskDetails from "../../components/TaskDetails";
 const Overview = (props) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  
+  const { setSelected } = props
   useEffect(()=>{
-    props.setSelected("Overview")
-
-  },[]);
+   setSelected("Overview")
+  },[setSelected]);
 
   return (
     <Box m="20px"mb="50px">

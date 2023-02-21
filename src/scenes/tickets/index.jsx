@@ -3,9 +3,11 @@ import React, { useEffect } from "react";
 import { Box } from "@mui/material";
 
 const Tickets = (props) => {
+  const { setSelected } = props
   useEffect(()=>{
-    props.setSelected("Tickets")
-  },[]);
+   setSelected("Tickets")
+  },[setSelected]);
+  
   return (
     <Box ml="20px">
       

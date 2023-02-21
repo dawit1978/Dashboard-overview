@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Button, Typography, useTheme } from "@mui/material";
-import { tokens } from "../theme";
+import { Box, Button, Typography } from "@mui/material";
+// import { tokens } from "../theme";
 
 const DetailsBox = ({ title, subtitle, viewtitle }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  // const theme = useTheme();
+  // const colors = tokens(theme.palette.mode);
 
   return (
        <Box sx={{p:"10px"}}>

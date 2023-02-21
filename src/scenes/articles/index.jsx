@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
-import Header from "../../components/Header";
+
 
 const Articles = (props) => {
 
+  const { setSelected } = props
   useEffect(()=>{
-    props.setSelected("Articles")
-
-  },[]);
+   setSelected("Articles")
+  },[setSelected]);
 
   return (
     <Box m="20px">

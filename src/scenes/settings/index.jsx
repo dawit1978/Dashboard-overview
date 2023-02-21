@@ -4,9 +4,10 @@ import { Box } from "@mui/material";
 
 const Settings = (props) => {
 
+  const { setSelected } = props
   useEffect(()=>{
-    props.setSelected("Settings")
-  },[]);
+   setSelected("Settings")
+  },[setSelected]);
 
   return (
     <Box m="20px">
